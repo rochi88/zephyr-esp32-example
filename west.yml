@@ -1,6 +1,6 @@
 manifest:
   self:
-    path: qemu-app
+    path: zephyr-esp32c3-example
 
   remotes:
     - name: zephyrproject-rtos
@@ -15,8 +15,8 @@ manifest:
       import:
         # Limit the Zephyr modules to the required set
         name-allowlist:
-            - cmsis
             - hal_espressif
+            - mbedtls
 
     - name: memfault-firmware-sdk
       path: modules/lib/memfault-firmware-sdk
