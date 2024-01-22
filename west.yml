@@ -15,10 +15,10 @@ manifest:
       import:
         # Limit the Zephyr modules to the required set
         name-allowlist:
-            - hal_espressif
-            - mbedtls
+          - hal_espressif
+          - mbedtls
 
     - name: memfault-firmware-sdk
       path: modules/lib/memfault-firmware-sdk
       remote: memfault
-      revision: esp32c3+zephyr-rc1
+      revision: esp32c3+zephyr-rc2
