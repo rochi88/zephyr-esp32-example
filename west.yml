@@ -21,4 +21,4 @@ manifest:
     - name: memfault-firmware-sdk
       path: modules/lib/memfault-firmware-sdk
       remote: memfault
-      revision: esp32c3+zephyr-rc2
+      revision: esp32c3+zephyr-rc3
