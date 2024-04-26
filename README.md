@@ -1,3 +1,11 @@
+> [!IMPORTANT]
+>
+> 🚧 This example repo is using an experimental version of the [Memfault
+> Firmware SDK](https://github.com/memfault/memfault-firmware-sdk). Feel free to
+> test it out and send us any feedback at <support@memfault.com>, but expect
+> this example to have some missing functionality or other undocumented
+> limitations! 🚧
+
 # Memfault Zephyr + ESP32C3 Example
 
 This sample app is based on the Zephyr `samples/net/wifi` example. It
