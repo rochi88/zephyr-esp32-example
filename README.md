@@ -1,7 +1,11 @@
 # Memfault Zephyr + ESP32C3 Example
 
 This sample app is based on the Zephyr `samples/net/wifi` example. It
-demonstrates a Zephyr + ESP32-C3 integration with the Memfault SDK.
+demonstrates a Zephyr + ESP32 integration with the Memfault SDK. It has been
+tested on the following boards:
+
+- `esp32c3_devkitm` (default board)
+- `esp32s3_devkitm`
 
 ## Getting Started
 
@@ -18,14 +22,14 @@ To try out this example app:
    ```bash
    $ mkdir zephyr-workspace
    $ cd zephyr-workspace
-   $ west init -m https://github.com/memfault/zephyr-esp32c3-example
+   $ west init -m https://github.com/memfault/zephyr-esp32-example
    $ west update
    ```
 
 3. Build the example app:
 
    ```bash
-   $ west build zephyr-esp32c3-example
+   $ west build zephyr-esp32-example
    ```
 
 4. Flash the example app:
