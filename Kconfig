@@ -3,13 +3,6 @@
 # This is loaded when building this directory with west.
 menu "Memfault Example Application Configuration"
 
-config MEMFAULT_PROJECT_KEY
-    string "Memfault Project Key"
-    help
-      The Memfault Project Key to use for this example application.
-      This can be found by logging into https://app.memfault.com, clicking on
-      the settings icon in the top right corner, and selecting "Projects".
-
 config MEMFAULT_EXAMPLE_SOFTWARE_VERSION
     string "Software Version"
     default "1.0.0"
