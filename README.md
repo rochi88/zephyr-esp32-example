@@ -70,3 +70,36 @@ To try out this example app:
    uart:~$ mflt export
    MC:CAKnAgIDAQpqemVwaHlyLWFwcAltMS4wLjArZDU5MmRhOAZvZXNwMzJjM19kZXZraXRtC0Z1sxH2/usEogEABQAISg==:
    ```
+
+## Testing OTA
+
+The payload to upload to Memfault is:
+
+```plaintext
+build/zephyr-esp32-example/zephyr/zephyr.signed.confirmed.bin
+```
+
+Follow the normal Memfault OTA workflow:
+
+1. build and flash an image with a version like `0.0.1` (see the
+   [`VERSION`](VERSION) file for setting an application version).
+2. rebuild with a newer version, `0.0.2`
+3. upload the `zephyr.signed.confirmed.bin` file to a [Memfault
+   Release](https://mflt.io/releases) named `0.0.2`.
+4. deploy the `0.0.2` release to the cohort with the device (`default` unless
+   changed)
+5. on the device shell, connect wifi with `wifi connect <ssid> <pw>`, and
+   trigger the OTA with `mflt get_latest_release`
+6. when the device reboots, confirm the new version is set with `mflt get_device_info`
+
+> [!NOTE]
+>
+> If this error occurs when applying the new image:
+>
+> ```plaintext
+> [00:10:07.255,000] <dbg> mflt: memfault_platform_log: Error requesting upgrade, rv=-14
+> [00:10:07.260,000] <err> mflt: Error upgrading firmware, rv=-1
+> ```
+>
+> It may be necessary to run `mcuboot erase 2` one time before running the test,
+> to wipe the secondary slot so it's ready to receive the new image.
